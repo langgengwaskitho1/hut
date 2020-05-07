@@ -10,4 +10,16 @@ $.getJSON('data/pizza.json', function(data) {
     });
 });
 
+$('.nav-link').on('click', function() {
+    $('.nav-link').removeClass('active');
+    $(this).addClass('active');
+    // this = smua li yang kita klik
+
+    let kategori = $(this).html();
+    // kita ambil apa2 yang bisa kita klik, html = namanya
+    
+    $('h1').html(kategori);
+    // jquery carikan saya h1 dan gantikan dengan html(kategorinya)
+});
+
 // DIATAS SAMA SAJA DENGAN $.ajax
